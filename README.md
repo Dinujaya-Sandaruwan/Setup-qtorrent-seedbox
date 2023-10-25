@@ -29,7 +29,12 @@ apt upgrade
 Install the required library dependencies:
 
 ```bash
+sudo -i
+echo "deb http://security.ubuntu.com/ubuntu/ bionic-security main" >> /etc/apt/sources.list
+sudo apt update && apt-cache policy libssl1.0.0
+
 apt-get install libssl1.0.0 libssl-dev
+
 ```
 
 ## Step 4: Download and Install uTorrent Server
@@ -63,7 +68,7 @@ http://xx.xx.xx.xx:8080/gui/web/index.html
 
 ## Step 7: Add a Magnet Link
 
-- Log in to the Web UI using your username and password.
+- Log in to the Web UI using your username (admin) and password (none).
 - Look for an option to add a new torrent, often labeled as "Add Torrent" or "Add URL."
 - Paste the magnet link and initiate the addition process.
 
